@@ -11,6 +11,7 @@
   --hero-background-color: #2f303a;
   --portfolio-border: #eeeeee;
   --footer-contact-background: rgba(255, 255, 255, 0.6);
+  --network-icon-color: #AFB1B8;
 }
 
 body {
@@ -44,6 +45,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -77,6 +80,7 @@ button {
   padding-left: 15px;
   border-bottom: none;
 }
+
 
 .main-nav {
   display: flex;
@@ -153,6 +157,7 @@ margin-left: 50px;
   margin-left: auto;
 }
 
+
 .contacts > .item + .item {
   margin-left: 40px;
 }
@@ -160,6 +165,17 @@ margin-left: 50px;
 .contacts.item {
   margin-left: auto;
 }
+
+.contact-icon{
+height: 100%;
+margin-right: 10px;
+fill: currentColor;
+}
+
+.contact-icon:nth-child(2){
+  padding-left: 30px;
+}
+
 
 .contacts .link {
   display: inline-block;
@@ -177,6 +193,7 @@ margin-left: 50px;
   color: var(--accent-color);
 }
 
+
 /* головна частина */
 .section {
   padding-top: 94px;
@@ -188,12 +205,19 @@ margin-left: 50px;
 .container-hero {
   text-align: center;
   padding-bottom: 0;
-  background-color: var(--hero-background-color);
 }
 
 .hero {
+  background-image: url('../images/hero-img.jpg');
   background-color: var(--hero-background-color);
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid black;
+  background-repeat: no-repeat;
 }
+
 
 .hero-title {
   display: block;
@@ -225,7 +249,7 @@ margin-left: 50px;
 
 .section-title {
   margin-top: 0;
-  margin-bottom: ;
+  margin-bottom: 0 ;
   color: var(--section-title-color);
   font-weight: 700;
   font-size: 36px;
@@ -289,6 +313,31 @@ margin-left: 50px;
 .section-features {
   padding-bottom: 0;
 }
+
+
+.feature-card{
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 270px;
+max-height: 120px;
+margin-bottom: 30px;
+padding-top: 25px;
+padding-bottom: 25px;
+background-color: var(--secondary-button-background-color);
+}
+
+
+.features-card-icon{
+width: 70px;
+height: 70px;
+fill: currentColor;
+}
+
+.features-card-icon:hover{
+fill: var(--accent-color);
+}
+
 
 .container-features {
   display: flex;
@@ -362,10 +411,40 @@ margin-left: 50px;
   margin-right: 0;
 }
 
+
+
+
+.network-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.network-item{
+width: 44px;
+height: 44px;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+.network-icon{
+flex-basis: calc((100%-30px) / 4);
+fill: currentColor;
+width: 20px;
+height: 20px;
+}
+
+
+.network-icon:hover{
+color: var(--primary-button-color);
+background-color: var(--accent-color);
+}
+
 .card {
   display: block;
   padding-top: 30px;
-  padding-bottom: 30px;
   background-color: var(--primary-button-color);
   text-align: center;
 }
@@ -375,6 +454,10 @@ margin-left: 50px;
   text-align: center;
 }
 
+.team-card{
+  max-width: 270px;
+  max-height: 428px;
+}
 .our-team {
   margin-left: auto;
   margin-right: auto;
