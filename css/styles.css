@@ -525,8 +525,8 @@ margin-left: 50px;
   margin-left: 0;
 }
 
-.client-item:hover,
-.client-item:focus {
+.client-link:hover,
+.client-link:focus {
   color: var(--accent-color);
   background-color: var(--primary-button-color);
 }
@@ -765,6 +765,6 @@ margin-left: 50px;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.1;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: var(--primary-button-color);
 }
