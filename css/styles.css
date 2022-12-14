@@ -153,7 +153,6 @@ margin-left: 50px;
 
 .contacts {
   display: flex;
-  align-items: center;
   margin-left: auto;
 }
 
@@ -176,7 +175,9 @@ margin-left: 50px;
 }
 
 .contacts .link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
@@ -411,47 +412,41 @@ margin-left: 50px;
   margin-right: 0;
 }
 
-.networks {
-  margin-left: -10px;
-  display: flex;
-  justify-content: center;
-}
-
 .network-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 16px;
 }
 
 .network-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 44px;
   height: 44px;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--network-icon-color);
-  border-radius: 50%;
 }
 
 .network-link {
-  margin: 0;
-  padding: 0;
-  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 50%;
+  color: var(--network-icon-color);
   text-decoration: none;
   font-size: 0;
 }
 
 .network-icon {
-  flex-basis: calc((100%-30px) / 4);
   fill: currentColor;
 }
 
-.network-item:hover,
-.network-item:focus {
+.network-link:hover,
+.network-link:focus {
   color: var(--primary-button-color);
   background-color: var(--accent-color);
 }
@@ -459,6 +454,7 @@ margin-left: 50px;
 .card {
   display: block;
   padding-top: 30px;
+  padding-bottom: 30px;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -494,8 +490,8 @@ margin-left: 50px;
 .job-title {
   font-size: 16px;
   list-style: 1.19;
+  padding-bottom: 16px;
   text-align: center;
-  margin-bottom: 16px;
 }
 
 /* client section */
@@ -545,6 +541,7 @@ margin-left: 50px;
   height: 92px;
   margin-bottom: 0;
   border: 1px solid var(--network-icon-color);
+  border-radius: 4px;
 }
 
 .client-icon {
@@ -748,6 +745,7 @@ margin-left: 50px;
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   border-radius: 50%;
@@ -755,11 +753,6 @@ margin-left: 50px;
   font-size: 0;
   color: var(--primary-button-color);
   background-color: var(--foooter-icon-color);
-}
-
-.footer.network-item {
-  width: 44px;
-  height: 44px;
 }
 
 .footer.network-link:hover,
@@ -775,12 +768,4 @@ margin-left: 50px;
   line-height: 1.1;
   text-transform: capitalize;
   color: var(--primary-button-color);
-}
-
-.footer.network-icon {
-  gap: 10px;
-  fill: currentColor;
-  min-width: 20px;
-  min-height: 20px;
-  background: none;
 }
